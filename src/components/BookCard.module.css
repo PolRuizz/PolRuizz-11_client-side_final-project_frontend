@@ -1,0 +1,31 @@
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.edit {
+  background-color: #ffc107;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete {
+  background-color: #dc3545;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}

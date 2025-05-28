@@ -1,3 +1,73 @@
+# Book Management Application
+
+A React application for managing your book collection. Built with React and Vite.
+
+## Features
+
+- View your book collection in a card-based layout
+- Add new books with title, author, year, and reading status
+- Edit existing book information
+- Delete books from your collection
+- Responsive design for all screen sizes
+
+## Setup Instructions
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/11_client-side_final-project_frontend.git
+cd 11_client-side_final-project_frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file in the root directory with the following content:
+```
+VITE_API_URL=http://localhost:3000
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. In a separate terminal, start the json-server:
+```bash
+npx json-server --watch db.json
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run test` - Run tests
+- `npm run lint` - Run linter
+
+## Environment Variables
+
+The application uses the following environment variables:
+
+- `VITE_API_URL` - URL of the json-server backend (default: http://localhost:3000)
+
+## Testing
+
+The application includes unit tests for components. Run the tests with:
+
+```bash
+npm run test
+```
+
+## Production Deployment
+
+The application is deployed on Netlify. You can view it at: [Your Netlify URL]
+
+## Author
+
+[Your Name]
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

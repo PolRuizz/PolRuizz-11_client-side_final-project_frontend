@@ -12,12 +12,29 @@ export default function AddBookForm({ onAdd }) {
 
   return (
     <div className={styles.container}>
-      {!showForm ? (
-        <button className={styles.addButton} onClick={() => setShowForm(true)}>
-          Add New Book
-        </button>
+      {showForm ? (
+        <div className={styles.formWrapper}>
+          <BookForm onSubmit={handleAdd} />
+          <p className={styles.linkLine}>
+            <button
+              type="button"
+              className={styles.cancelButton}
+              onClick={() => setShowForm(false)}
+            >
+              Cancel
+            </button>
+          </p>
+        </div>
       ) : (
-        <BookForm onSubmit={handleAdd} onCancel={() => setShowForm(false)} />
+        <p className={styles.linkLine}>
+          <button
+            type="button"
+            className={styles.cancelButton}
+            onClick={() => setShowForm(true)}
+          >
+            Add New Book
+          </button>
+        </p>
       )}
     </div>
   );

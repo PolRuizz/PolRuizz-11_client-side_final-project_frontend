@@ -3,40 +3,34 @@ import BookCard from "./BookCard";
 import BookForm from "./BookForm";
 import styles from "./BookList.module.css";
 
-export default function BookList() {
+export default function BookList({ refreshTrigger }) {
   const [books, setBooks] = useState([]);
   const [editingBook, setEditingBook] = useState(null);
 
   const fetchBooks = async () => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/tasks`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/books`);
       const data = await res.json();
-
-      if (Array.isArray(data)) {
-        setBooks(data);
-      } else {
-        console.error("Unexpected response:", data);
-        setBooks([]);
-      }
+      setBooks(Array.isArray(data) ? data : []);
     } catch (error) {
-      console.error("Error fetching tasks:", error);
+      console.error("Error fetching books:", error);
       setBooks([]);
     }
   };
 
   useEffect(() => {
     fetchBooks();
-  }, []);
+  }, [refreshTrigger]);
 
   const handleDelete = async (id) => {
-    await fetch(`${import.meta.env.VITE_API_URL}/tasks/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/books/${id}`, {
       method: "DELETE",
     });
     fetchBooks();
   };
 
   const handleEditSubmit = async (updatedBook) => {
-    await fetch(`${import.meta.env.VITE_API_URL}/tasks/${updatedBook.id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/books/${updatedBook.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedBook),

@@ -31,10 +31,38 @@ export default function BookForm({ onSubmit, initialData, onCancel }) {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <input type="text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} required />
-      <input type="text" name="author" placeholder="Author" value={formData.author} onChange={handleChange} required />
-      <input type="number" name="year" placeholder="Year" value={formData.year} onChange={handleChange} required />
-      <select name="status" value={formData.status} onChange={handleChange}>
+      <input
+        type="text"
+        name="title"
+        placeholder="Title"
+        value={formData.title}
+        onChange={handleChange}
+        required
+        autoComplete="off"
+      />
+      <input
+        type="text"
+        name="author"
+        placeholder="Author"
+        value={formData.author}
+        onChange={handleChange}
+        required
+        autoComplete="off"
+      />
+      <input
+        type="number"
+        name="year"
+        placeholder="Year"
+        value={formData.year}
+        onChange={handleChange}
+        required
+        min="0"
+      />
+      <select
+        name="status"
+        value={formData.status}
+        onChange={handleChange}
+      >
         <option value="pending">Pending</option>
         <option value="in progress">In Progress</option>
         <option value="read">Read</option>
@@ -43,7 +71,15 @@ export default function BookForm({ onSubmit, initialData, onCancel }) {
         <button type="submit" className={styles.submit}>
           {initialData ? "Update" : "Add Book"}
         </button>
-        {initialData && <button type="button" className={styles.cancel} onClick={onCancel}>Cancel</button>}
+        {initialData && (
+          <button
+            type="button"
+            className={styles.cancel}
+            onClick={onCancel}
+          >
+            Cancel
+          </button>
+        )}
       </div>
     </form>
   );

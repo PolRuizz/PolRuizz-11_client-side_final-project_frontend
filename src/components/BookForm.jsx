@@ -30,7 +30,7 @@ export default function BookForm({ onSubmit, initialData, onCancel }) {
     };
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.bookForm__form} onSubmit={handleSubmit}>
             <input
                 type="text"
                 name="title"
@@ -67,14 +67,14 @@ export default function BookForm({ onSubmit, initialData, onCancel }) {
                 <option value="in progress">In Progress</option>
                 <option value="read">Read</option>
             </select>
-            <div className={styles.actions}>
-                <button type="submit" className={styles.submit}>
+            <div className={styles.bookForm__actions}>
+                <button type="submit" className={styles.bookForm__submit}>
                     {initialData ? "Update" : "Add Book"}
                 </button>
                 {initialData && (
                     <button
                         type="button"
-                        className={styles.cancel}
+                        className={styles.bookForm__cancel}
                         onClick={onCancel}
                     >
                         Cancel

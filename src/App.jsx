@@ -1,25 +1,35 @@
-import { useState } from "react";
 import AddBookForm from "./components/AddBookForm";
 import BookList from "./components/BookList";
 import styles from "./App.module.css";
+import { useBooksApi } from "./components/hooks/useBookApi";
 
 export default function App() {
-    const [refresh, setRefresh] = useState(0);
+    const {
+        books,
+        loading,
+        error,
+        createBook,
+        deleteBook,
+        updateBook,
+        fetchBooks,
+    } = useBooksApi();
 
     const handleAdd = async (newBook) => {
-        await fetch(`${import.meta.env.VITE_API_URL}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newBook),
-        });
-        setRefresh((prev) => prev + 1);
+        await createBook(newBook);
     };
 
     return (
         <div className={styles.app}>
             <h1>My Book Collection</h1>
+            {error && <p style={{ color: "red" }}>Error: {error.message}</p>}
             <AddBookForm onAdd={handleAdd} />
-            <BookList refreshTrigger={refresh} />
+            <BookList
+                books={books}
+                loading={loading}
+                onDelete={deleteBook}
+                onUpdate={updateBook}
+                onRefresh={fetchBooks}
+            />
         </div>
     );
 }

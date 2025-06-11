@@ -45,9 +45,9 @@ export default function BookList({ refreshTrigger }) {
     };
 
     return (
-        <section className={styles.list}>
+        <section className={styles.bookList__list}>
             {editingBook && (
-                <div className={styles.editBox}>
+                <div className={styles.bookList__editBox}>
                     <h2>Edit Book</h2>
                     <BookForm
                         initialData={editingBook}
@@ -56,7 +56,7 @@ export default function BookList({ refreshTrigger }) {
                     />
                 </div>
             )}
-            <div className={styles.grid}>
+            <div className={styles.bookList__grid}>
                 {books.map((book) => (
                     <BookCard
                         key={book.id}

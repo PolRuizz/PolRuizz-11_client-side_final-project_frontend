@@ -7,7 +7,7 @@ export default function App() {
     const [refresh, setRefresh] = useState(0);
 
     const handleAdd = async (newBook) => {
-        await fetch(`${import.meta.env.VITE_API_URL}/books`, {
+        await fetch(`${import.meta.env.VITE_API_URL}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newBook),

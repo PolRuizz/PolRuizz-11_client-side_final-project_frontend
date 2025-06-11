@@ -18,11 +18,11 @@ Web application to manage a personal book collection, tracking their reading sta
 
 ```ts
 type Book = {
-  id: number;
-  title: string;
-  author: string;
-  year: number;
-  status: "pending" | "in progress" | "read";
+    id: number;
+    title: string;
+    author: string;
+    year: number;
+    status: "pending" | "in progress" | "read";
 };
 ```
 
@@ -68,8 +68,8 @@ VITE_API_URL=https://your-production-api.netlify.app // production
 ## 🔄 CI/CD
 
 - ✅ Husky configured with:
-  - `pre-commit`: format
-  - `pre-push`: tests
+    - `pre-commit`: format
+    - `pre-push`: tests
 - ✅ GitHub Actions:
-  - Workflow for format and tests
+    - Workflow for format and tests
 - ✅ Deployment to Netlify

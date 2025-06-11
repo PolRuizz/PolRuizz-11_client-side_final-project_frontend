@@ -40,17 +40,17 @@ The application should allow managing a collection of read books. For each book,
 - Display the list of books in **card format**
 - Each card must include:
 
-  - Book information
-  - Buttons to **edit** and **delete**
+    - Book information
+    - Buttons to **edit** and **delete**
 
 - Form to add a new book
 - Edit form that loads the selected book's data
 - Communication with the API via fetch:
 
-  - `GET` to retrieve the list of books
-  - `POST` to add a book
-  - `PUT` to edit a book
-  - `DELETE` to delete a book
+    - `GET` to retrieve the list of books
+    - `POST` to add a book
+    - `PUT` to edit a book
+    - `DELETE` to delete a book
 
 ### Backend
 
@@ -79,13 +79,13 @@ The application should allow managing a collection of read books. For each book,
 
 - Use the **Husky hooks** (already provided):
 
-  - `pre-commit`: format check
-  - `pre-push`: test execution
+    - `pre-commit`: format check
+    - `pre-push`: test execution
 
 - Activate two **GitHub Actions** (already provided):
 
-  - Lint and format
-  - Test execution
+    - Lint and format
+    - Test execution
 
 - Deploy the app to **Netlify**, and include the URL in the `README.md`
 
@@ -94,6 +94,6 @@ The application should allow managing a collection of read books. For each book,
 - Publish the repository on GitHub (`public`)
 - On the `main` branch, include a `README.md` with:
 
-  - Full name
-  - Production URL (Netlify)
-  - Instructions to run it locally
+    - Full name
+    - Production URL (Netlify)
+    - Instructions to run it locally

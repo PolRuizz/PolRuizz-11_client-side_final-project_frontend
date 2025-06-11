@@ -4,7 +4,7 @@
     margin: 2rem 0;
 }
 
-.addButton {
+.addBookForm__addButton {
     background: #388e3c;
     color: #fff;
     border: none;
@@ -17,7 +17,7 @@
     transition: background 0.2s;
 }
 
-.formWrapper {
+.addBookForm__formWrapper {
     background: #fff;
     border: 1.5px solid #e0e0e0;
     border-radius: 16px;
@@ -28,14 +28,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .formWrapper {
+    .addBookForm__formWrapper {
         background: #23272a;
         border: 1.5px solid #444;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
     }
 }
 
-.cancelButton {
+.addBookForm__cancelButton {
     margin-bottom: 10px;
     background: #388e3c;
     color: #fff;
@@ -49,12 +49,12 @@
 }
 
 @media (max-width: 600px) {
-    .formWrapper {
+    .addBookForm__formWrapper {
         padding: 1rem 0.5rem 1rem 0.5rem;
         max-width: 98vw;
     }
-    .addButton,
-    .cancelButton {
+    .addBookForm__addButton,
+    .addBookForm__cancelButton {
         width: auto;
         padding: 12px 32px;
         font-size: 1em;

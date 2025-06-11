@@ -1,4 +1,4 @@
-.card {
+.bookCard__card {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
@@ -8,20 +8,20 @@
     max-width: 350px;
 }
 
-.header {
+.bookCard__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.title {
+.bookCard__title {
     font-size: 1.15em;
     font-weight: bold;
     margin-bottom: 2px;
     color: #111;
 }
 
-.year {
+.bookCard__year {
     background: #f3f3f3;
     color: #222;
     font-weight: bold;
@@ -33,13 +33,13 @@
     align-items: center;
 }
 
-.divider {
+.bookCard__divider {
     border: none;
     border-top: 1px solid #eee;
     margin: 14px 0 12px 0;
 }
 
-.status {
+.bookCard__status {
     display: inline-block;
     padding: 4px 16px;
     border-radius: 8px;
@@ -48,37 +48,37 @@
     text-transform: lowercase;
     border: 1.5px solid transparent;
 }
-.statusRead {
+.bookCard__statusRead {
     background: #e6f4ea;
     color: #388e3c;
     border-color: #b7e1cd;
 }
-.statusProgress {
+.bookCard__statusProgress {
     background: #e6f0fa;
     color: #1976d2;
     border-color: #90caf9;
 }
-.statusPending {
+.bookCard__statusPending {
     background: #fff4e6;
     color: #ff9800;
     border-color: #ffd699;
 }
 
-.statusContainer {
+.bookCard__statusContainer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     min-height: 32px;
 }
 
-.actions {
+.bookCard__actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
 }
 
-.edit {
+.bookCard__edit {
     background: #f3f3f3;
     color: #222;
     font-weight: bold;
@@ -91,12 +91,12 @@
         border 0.2s;
 }
 
-.edit:hover {
+.bookCard__edit:hover {
     background: #e0e0e0;
     border-color: #bdbdbd;
 }
 
-.delete {
+.bookCard__delete {
     background: #ffebee;
     color: #c62828;
     font-weight: bold;
@@ -109,25 +109,25 @@
         border 0.2s;
 }
 
-.delete:hover {
+.bookCard__delete:hover {
     background: #ffcdd2;
     border-color: #e57373;
 }
 
 @media (max-width: 600px) {
-    .card {
+    .bookCard__card {
         min-width: unset;
         max-width: 100%;
         padding: 12px 6px 10px 6px;
         margin-bottom: 16px;
     }
-    .actions {
+    .bookCard__actions {
         flex-direction: row;
         gap: 10px;
         justify-content: space-between;
     }
-    .edit,
-    .delete {
+    .bookCard__edit,
+    .bookCard__delete {
         width: auto;
         padding: 7px 24px;
         font-size: 1em;

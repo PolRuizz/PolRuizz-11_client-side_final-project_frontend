@@ -13,12 +13,12 @@ export default function AddBookForm({ onAdd }) {
     return (
         <div className={styles.container}>
             {showForm ? (
-                <div className={styles.formWrapper}>
+                <div className={styles.addBookForm__formWrapper}>
                     <BookForm onSubmit={handleAdd} />
                     <p className={styles.linkLine}>
                         <button
                             type="button"
-                            className={styles.cancelButton}
+                            className={styles.addBookForm__cancelButton}
                             onClick={() => setShowForm(false)}
                         >
                             Cancel
@@ -29,7 +29,7 @@ export default function AddBookForm({ onAdd }) {
                 <p className={styles.linkLine}>
                     <button
                         type="button"
-                        className={styles.cancelButton}
+                        className={styles.addBookForm__cancelButton}
                         onClick={() => setShowForm(true)}
                     >
                         Add New Book

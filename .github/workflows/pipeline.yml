@@ -28,4 +28,3 @@ jobs:
 
             - name: Execute test suite
               run: npm test
-              

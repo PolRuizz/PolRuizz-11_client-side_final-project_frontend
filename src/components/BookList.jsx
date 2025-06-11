@@ -9,7 +9,7 @@ export default function BookList({ refreshTrigger }) {
 
   const fetchBooks = async () => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/books`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}`);
       const data = await res.json();
       setBooks(Array.isArray(data) ? data : []);
     } catch (error) {
@@ -23,14 +23,14 @@ export default function BookList({ refreshTrigger }) {
   }, [refreshTrigger]);
 
   const handleDelete = async (id) => {
-    await fetch(`${import.meta.env.VITE_API_URL}/books/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
       method: "DELETE",
     });
     fetchBooks();
   };
 
   const handleEditSubmit = async (updatedBook) => {
-    await fetch(`${import.meta.env.VITE_API_URL}/books/${updatedBook.id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/${updatedBook.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedBook),
